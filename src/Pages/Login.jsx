@@ -15,7 +15,7 @@ const Login = ({ setLogin }) => {
     }
     console.log(obj)
 
-    let res = await axios.post(`http://localhost:8080/api/users/login`, obj);
+    let res = await axios.post(`https://expense-backend-z4gs.onrender.com/api/users/login`, obj);
     console.log(res.data)
 
     if (res.data.success) {
