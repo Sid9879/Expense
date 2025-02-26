@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Login = ({ setLogin }) => {
+const Login = ({ setlogin }) => {
   let emailRef = useRef()
   let passwordRef = useRef()
   let navigate = useNavigate()
