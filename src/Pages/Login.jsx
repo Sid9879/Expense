@@ -20,7 +20,7 @@ const Login = ({ setLogin }) => {
 
     if (res.data.success) {
       localStorage.setItem('expenseLogin', JSON.stringify(res.data.user))
-      setLogin(true);
+      setlogin(true);
       navigate('/')
     } else {
       alert(res.data.msg)
