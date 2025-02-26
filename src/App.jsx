@@ -15,9 +15,6 @@ function App() {
      <Routes>
      <Route path="/" element={login===true ? <Home /> : <Navigate to="/login" />} />
      <Route path="/login" element={ login === false ? <Login setlogin={setlogin}/> : <Navigate to = "/login" />} />
-     {/* <Route path="/login" element={login ? <Home/> : <Navigate to="/login" />} /> */}
-
-
       <Route path= '/signup' element={<Signup/>}/>
      </Routes>
      </BrowserRouter>
