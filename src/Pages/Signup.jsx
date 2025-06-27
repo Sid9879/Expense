@@ -17,7 +17,7 @@ const Signup = () => {
     }
     console.log(obj)
 
-    let res = await fetch('https://expense-backend-z4gs.onrender.com/api/users/create',{
+    let res = await fetch('https://expense-backend-ol96.onrender.com/api/users/create',{
       method:'POST',
       headers:{
         'Content-Type':'application/json',

@@ -15,7 +15,7 @@ const Login = (props) => {
     }
     console.log(obj)
 
-    let res = await axios.post(`https://expense-backend-z4gs.onrender.com/api/users/login`, obj);
+    let res = await axios.post(`https://expense-backend-ol96.onrender.com/api/users/login`, obj);
     console.log(res.data)
 
     if (res.data.success) {

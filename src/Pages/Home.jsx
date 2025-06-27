@@ -21,7 +21,7 @@ const Home = () => {
         if (updatePriceRef.current.value) obj.price = updatePriceRef.current.value;
         if (updateNameRef.current.value) obj.expenseName = updateNameRef.current.value;
 
-        let res = await axios.put(`https://expense-backend-z4gs.onrender.com/api/expense/update/${selectedId}`, obj);
+        let res = await axios.put(`https://expense-backend-ol96.onrender.com/api/expense/update/${selectedId}`, obj);
         getData();
         updateNameRef.current.value = "";
         updateDateRef.current.value = "";
@@ -43,7 +43,7 @@ const Home = () => {
             alert("Expense already exists");
             return;
         }
-        await axios.post('https://expense-backend-z4gs.onrender.com/api/expense/create', obj);
+        await axios.post('https://expense-backend-ol96.onrender.com/api/expense/create', obj);
         getData();
         placeRef.current.value = "";
         priceRef.current.value = "";
@@ -52,14 +52,14 @@ const Home = () => {
 
     const [arr, setarr] = useState([]);
     const getData = async () => {
-        let res = await axios.post('https://expense-backend-z4gs.onrender.com/api/expense/getexpense', { userId: user._id });
+        let res = await axios.post('https://expense-backend-ol96.onrender.com/api/expense/getexpense', { userId: user._id });
         setarr(res.data.data);
     };
     useEffect(() => { getData(); }, []);
 
     const handleDelete = async (expenseId) => {
         try {
-            await axios.delete(`https://expense-backend-z4gs.onrender.com/api/expense/delete/${expenseId}`);
+            await axios.delete(`https://expense-backend-ol96.onrender.com/api/expense/delete/${expenseId}`);
             getData();
         } catch (error) {
             console.error("Error deleting the expense:", error);
