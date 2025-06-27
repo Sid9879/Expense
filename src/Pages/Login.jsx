@@ -13,10 +13,9 @@ const Login = (props) => {
       email: emailRef.current.value,
       password: passwordRef.current.value
     }
-    console.log(obj)
 
     let res = await axios.post(`https://expense-backend-ol96.onrender.com/api/users/login`, obj);
-    console.log(res.data)
+  
 
     if (res.data.success) {
       localStorage.setItem('expenseLogin', JSON.stringify(res.data.user))

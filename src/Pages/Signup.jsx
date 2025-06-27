@@ -15,7 +15,7 @@ const Signup = () => {
       email:emailRef.current.value,
       password:passwordRef.current.value
     }
-    console.log(obj)
+    
 
     let res = await fetch('https://expense-backend-ol96.onrender.com/api/users/create',{
       method:'POST',
@@ -25,7 +25,7 @@ const Signup = () => {
       body:JSON.stringify(obj)
     })
 let data = await res.json()
-console.log(data)
+
 
 if(data.success){
 navigate('/login')
